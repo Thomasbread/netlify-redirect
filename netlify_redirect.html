@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <title>Weiterleitung...</title>
+    <script>
+      // Trage hier deine ngrok-Adresse ein (ohne https://)
+      var ngrokHost = "DEINE-NGROK-ADRESSE.ngrok.io";
+      var ngrokUrl = "https://" + ngrokHost;
+      // Sofortige Weiterleitung
+      window.location.href = ngrokUrl;
+    </script>
+    <!-- Fallback für Browser ohne JS -->
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=https://DEINE-NGROK-ADRESSE.ngrok.io">
+    </noscript>
+  </head>
+  <body>
+    <p>Du wirst weitergeleitet... Falls nicht, <a id="ngrok-link" href="#">klicke hier</a>.</p>
+    <script>
+      // Setze den Link im Body
+      document.getElementById("ngrok-link").href = ngrokUrl;
+    </script>
+  </body>
+</html> 
